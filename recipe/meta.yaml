@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cubelyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cubelyr/cubelyr_{{ version }}.tar.gz
-  sha256: 45404ff839ecc38b1caea1f7ecbb9f26390c97fbf0ad7676fb6d1580932c3a41
+  sha256: 740a34100592b2c6b7bc89a31bddccf4c8fd95720caf68f530104f17aada77bc
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -53,7 +53,7 @@ about:
   summary: An implementation of a data cube extracted out of 'dplyr' for backward compatibility.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
