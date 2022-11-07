@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cubelyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cubelyr/cubelyr_{{ version }}.tar.gz
-  sha256: 740a34100592b2c6b7bc89a31bddccf4c8fd95720caf68f530104f17aada77bc
+  sha256: 18b10f1fe561305a1e115a438460264b88b301b3e8c086b931500a798be39b94
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
